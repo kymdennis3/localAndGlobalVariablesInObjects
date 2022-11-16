@@ -2,13 +2,15 @@ import java.util.Random;
 
 public class DiceRoller {
 
+    Random random;
+    int number;
     DiceRoller(){
-        Random random = new Random(); //instance of the random class
+        random = new Random(); //instance of the random class
         int number = 0; //holds our results
-        roll(random,number);
+        roll();
 
     }
-    void roll(Random random, int number){
+    void roll(){
         number = random.nextInt(6)+1;
         System.out.println(number);
 
